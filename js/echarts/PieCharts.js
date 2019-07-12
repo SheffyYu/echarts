@@ -50,6 +50,15 @@ function Nightingale(id,data,color) {
             trigger: 'item',
             formatter: "{b}: <br/>{c} ({d}%)"
         },
+        // legend: {       //图例
+        //     orient: 'horizontal',       //图例列表朝向 horizontal/vertical
+        //     bottom:10,      //离底部距离
+        //     left: 'center',     //居中
+        //     textStyle:{
+        //         color:'rgba(255, 255, 255, 0.5)'
+        //     },
+        //     data:data.name
+        // },
         visualMap: {
             show: false,
             min: 80,
