@@ -6,17 +6,48 @@
     <META    HTTP-EQUIV="Expires" CONTENT="0">
     <meta http-equiv="Cache" content="no-cache">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/echarts.min.js"></script>
     <script type="text/javascript" src="../js/theme/infographic.js"></script>
     <title>title</title>
 </head>
-<body>
-<div id="echart1" style="position: absolute;left: 391px;top:232px;width: 600px;height: 400px;"></div>
-</body>
+<body style="background: #2c343c">
+<span style="color: whitesmoke;position: absolute;left:150px;top:20px;font-size: 20px;">基础饼图</span>
+<div id="echart1" style="position: absolute;left: 10px;top:20px;width: 400px;height: 400px;"></div>
+<span style="color: whitesmoke;position: absolute;left:550px;top:20px;font-size: 20px;">南丁格尔玫瑰图</span>
+<div id="echart2" style="position: absolute;left: 410px;top:20px;width: 400px;height: 400px;"></div>
+</body><span style="color: whitesmoke;position: absolute;left:950px;top:20px;font-size: 20px;">多色南丁格尔玫瑰图</span>
+<div id="echart3" style="position: absolute;left: 810px;top:20px;width: 400px;height: 400px;"></div>
+<script src="../js/echarts/PieCharts.js"></script>
 <script type="text/javascript">
-
+var data=[
+    {value:235, name:'视频广告'},
+    {value:274, name:'联盟广告'},
+    {value:310, name:'邮件营销'},
+    {value:335, name:'直接访问'},
+    {value:400, name:'搜索引擎'}
+];
+var data2=[
+    {value:235, name:'视频广告'},
+    {value:214, name:'联盟广告'},
+    {value:200, name:'直接访问'},
+    {value:335, name:'qqqq'},
+    {value:400, name:'搜索引擎'},
+    {value:260, name:'wwww'},
+    {value:180, name:'rrrr'},
+    {value:366, name:'tttt'},
+    {value:480, name:'yyyy'},
+    {value:350, name:'uuuu'},
+    {value:400, name:'iiii'},
+    {value:250, name:'oooo'}
+];
+//基础饼图
+basePie("echart1",data);
+//南丁格尔图
+Nightingale("echart2",data,'#c23531');
+//多色南丁格尔图
+mulNightingale("echart3",data2);
 </script>
 </html>
